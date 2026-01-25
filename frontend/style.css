@@ -41,7 +41,6 @@ canvas {
     border-radius: 5px;
     cursor: pointer;
     margin: 0 10px;
-    transition: 0.2s;
 }
 
 .btn.primary {
@@ -51,6 +50,7 @@ canvas {
 
 .btn.primary:hover {
     background-color: #0056b3;
+    transition: 0.2s;
 }
 
 .btn.secondary {
@@ -60,6 +60,7 @@ canvas {
 
 .btn.secondary:hover {
     background-color: #545b62;
+    transition: 0.2s;
 }
 
 #result-area {
@@ -75,3 +76,10 @@ canvas {
     color: #e74c3c;
     font-size: 24px;
 }
+
+/*----------------CSS须知-----------------------*/
+/*1.一定要弄清楚各个元素的层级关系！
+    Body->Container->h;canvas;btn-group->btn;result-area-> 两个text
+  2.对body部分的套路:设置背景色,边距(自己),启用flex让内部元素居中,设置内部字体样式
+  3.对大部分容器的套路: 边界(边距margin，背景，边框样式，内部填充padding) --> 交互形式(cursor,transition...) --> 内部元素字(font-size,color...)
+*/

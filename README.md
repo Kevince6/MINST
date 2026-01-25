@@ -6,6 +6,8 @@
 - **高准确率：** 模型在MINST数据集上的准确率达到99.2%
 - **可视化：** 集成Tensorboard以监测训练损失和测试准确率
 - **结构清晰：** 模型定义，训练，验证逻辑清晰，易于阅读与二次开发
+- **前端交互:** 采用前端技术可视化展现模型效果.
+
 
 ## 环境配置:
 - Python 3.11.14
@@ -20,11 +22,17 @@
 - `NumRecog_method1.pth`: 训练好的模型权重文件‘
 - `NumRec_log/`: 训练过程的Tensorboard日志文件
 - `MINST/`： 本地存储的MINST数据集
+- `app.py`: 后端api服务程序
+- `frontend/`: 前端交互展示文件
 
 ## 使用指南:
 1. 训练模型: `python Num_Recognition.py`
 2. 验证模型: `python Num_Validation.py`
 3. 查看训练曲线: `tensorboard --logdir="NUmRec_log"`
+4. 启动后端api服务: `python app.py`
+5. 启动前端静态服务器: `python -m http.server 8000`
+6. 打开浏览器,访问: http://localhost:8000
+
 
 ## 实验结果:
 
@@ -32,5 +40,10 @@
 | --- | --- |
 | 准确率 | 99.2% |
 | 平均损失 | 0.00043 |
+
+## 前端交互界面展示:
+
+<img src="frontend/assets/image.png">
+
 
 
